@@ -67,12 +67,6 @@ function showError(error) {
     }
 }
 
-if(navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(setGeoByClass, showError);
-} else {
-    console.error("Geolocation is not supported by this browser!");
-}
-
 $(function () {
     function check_width(width) {
         var windowH = $(window).width();
@@ -145,14 +139,179 @@ $(function () {
             $pree.delay(600).fadeOut('slow');
         }, 1000)
     });
-    $(window).on('load', function () {
-        setTimeout(function(){
-            var $preloader = $('.girl'),
-                $svg_anm   = $('.cat');
-            $pree   = $('.pree');
-            $svg_anm.fadeOut('slow');
-            $preloader.delay(500).fadeOut('slow');
-            $pree.delay(600).fadeOut('slow');
-        }, 1000)
+    $('.city-chose-js').on('click', function(){
+        $('.choose-city-pop-up').fadeIn(300);
+        $.fn.fullpage.setAutoScrolling(false);
     });
+    $('.choose-city-pop-up-close').on('click', function(){
+        var parent = $(this).parents('.choose-city-pop-up');
+        $.fn.fullpage.setAutoScrolling(true);
+        parent.fadeOut(300);
+    });
+
+    var availableTags = [
+        "Москва",
+        "Санкт-Петербург",
+        "Волгоград",
+        "Пермь",
+        "Уфа",
+        "Тюмень",
+        "Ульяновск",
+        "Орск",
+        "Казань",
+        "Воронеж",
+        "Ужур",
+        "Омск",
+        "Самара",
+        "Чита",
+        "Новосибирск",
+        "Челябинск",
+        "Махачкала",
+        "Екатеринбург",
+        "Братск",
+        "Новокузнецк",
+        "Дзержинск",
+        "Нижний Новгород",
+        "Саратов",
+        "Курган",
+        "Магнитогорск",
+        "Хабаровск",
+        "Улан-Удэ",
+        "Петропавловск-Камчатский",
+        "Сургут",
+        "Красноярск",
+        "Ростов-на-Дону",
+        "Краснодар",
+        "Ханты-Мансийск",
+        "Междуреченск",
+        "Владивосток",
+        "Липецк",
+        "Комсомольск-на-Амуре",
+        "Грозный",
+        "Барнаул",
+        "Благовещенск",
+        "Ижевск",
+        "Тольятти",
+        "Пенза",
+        "Нижний Тагил",
+        "Томск",
+        "Магадан",
+        "Кемерово",
+        "Архангельск",
+        "Ангарск",
+        "Бийск",
+        "Владикавказ",
+        "Иркутск",
+        "Лесосибирск",
+        "Ставрополь",
+        "Нижневартовск",
+        "Оренбург",
+        "Новоульяновск",
+        "Тобольск",
+        "Копейск",
+        "Волжский",
+        "Рязань",
+        "Калининград",
+        "Белово",
+        "Прокопьевск",
+        "Астрахань",
+        "Усть-Илимск",
+        "Ярославль",
+        "Старый Оскол",
+        "Чапаевск",
+        "Златоуст",
+        "Курск",
+        "Брянск",
+        "Севастополь",
+        "Сочи",
+        "Шадринск",
+        "Уссурийск",
+        "Киров",
+        "Кумертау",
+        "Биробиджан",
+        "Волгодонск",
+        "Калуга",
+        "Соликамск",
+        "Смоленск",
+        "Южно-Сахалинск",
+        "Набережные Челны",
+        "Выборг",
+        "Красноармейск",
+        "Белгород",
+        "Каменск-Шахтинский",
+        "Домодедово",
+        "Шахты",
+        "Мурманск",
+        "Сибай",
+        "Нефтеюганск",
+        "Тверь",
+        "Сыктывкар",
+        "Нефтекамск",
+        "Тула",
+        "Кострома",
+        "Каменск-Уральский",
+        "Троицк",
+        "Новошахтинск",
+        "Владимир",
+        "Новочеркасск",
+        "Находка",
+        "Якутск",
+        "Орёл",
+        "Череповец",
+        "Северодвинск",
+        "Камышин",
+        "Сызрань",
+        "Нижнекамск",
+        "Вологда",
+        "Альметьевск",
+        "Энгельс",
+        "Петрозаводск",
+        "Абакан",
+        "Воткинск",
+        "Железногорск",
+        "Донецк",
+        "Химки",
+        "Чебоксары",
+        "Мыски",
+        "Стерлитамак",
+        "Керчь",
+        "Симферополь",
+        "Салават",
+        "Иваново",
+        "Димитровград",
+        "Пятигорск",
+        "Ишимбай",
+        "Рыбинск",
+        "Невинномысск",
+        "Йошкар-Ола"
+    ];
+
+    $(".form-city-js").autocomplete({
+        source: availableTags,
+        select: function( event, ui ) {
+            if(ui.item.value != "") {
+                $('.city-chose-js').text(ui.item.value);
+                $.fn.fullpage.setAutoScrolling(true);
+                $('.choose-city-pop-up').fadeOut(300);
+            }
+        }
+    });
+    if($('.city-chose-js').length) {
+        if(navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(setGeoByClass, showError);
+        } else {
+            console.error("Geolocation is not supported by this browser!");
+        }
+    }
+});
+
+$(window).on('load', function () {
+    setTimeout(function(){
+        var $preloader = $('.girl'),
+            $svg_anm   = $('.cat');
+        $pree   = $('.pree');
+        $svg_anm.fadeOut('slow');
+        $preloader.delay(500).fadeOut('slow');
+        $pree.delay(600).fadeOut('slow');
+    }, 1000)
 });

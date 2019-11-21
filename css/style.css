@@ -163,6 +163,23 @@ h1{
     text-transform: uppercase;
     font: 60px 'Myriad Pro Bold';
 }
+.inner_page h1 {
+    font: 30px 'Myriad Pro Bold', sans-serif;
+    color:#fc5c76;
+    margin-bottom: 16px;
+}
+.inner_page .girl-catalog {
+    margin-top: 54px;
+    position: relative;
+}
+.inner_page .load-more {
+    margin-top: 30px;
+    margin-bottom: 55px;
+}
+
+.h1-wr {
+    padding-top: 70px;
+}
 .cst-header-text-data h1 {
     margin-bottom: 5px;
 }
@@ -173,6 +190,7 @@ h1 span{
     margin-top: -122px;
     height: 100vh;
     box-sizing: border-box;
+    overflow: hidden;
 }
 .description-text{
     position: relative;
@@ -588,7 +606,7 @@ footer {
 
 /*prodpage*/
 .prod-page {
-    background: #000;
+    padding-top: 53px;
 }
 
 .prod-page .prod-inner {
@@ -636,7 +654,7 @@ footer {
 }
 
 .prod-page .prod-top-part--left__info {
-    width: 49%;
+    width: 58%;
     padding-left: 32px;
 }
 
@@ -678,7 +696,15 @@ footer {
     width: 100%;
     padding-top: 30px;
 }
-
+.container-load-more-product .load-more {
+    margin-top: 6px;
+    margin-bottom: 103px;
+}
+.container-load-more-product .load-more a  {
+    font-size: 18px;
+    width: 232px;
+    background-size: 100%;
+}
 .prod-page .prod-top-part--left__list ul {
     display: -webkit-flex;
     display: -moz-flex;
@@ -769,7 +795,7 @@ footer {
 .prod-page .prod-bot-part--in div img {
     margin-bottom: 36px;
     width: 100%;
-    height: 100%;
+    height: 50%;
     object-fit: cover;
 }
 
@@ -804,6 +830,113 @@ footer {
 .prod-page .prod-bot-part img {
     font-size: 0;
 }
+.choose-city-pop-up {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 25px 15px 15px;
+    background: rgba(0,0,0,.9);
+    color:#fff;
+    font-size:18px;
+    overflow-x: hidden;
+}
+.choose-city-pop-up-close {
+    font-size: 25px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+.choose-city-pop-up-cities {
+    font-size: 18px;
+    -webkit-columns: 4 200px;
+    -moz-columns: 4 200px;
+    columns: 4 200px;
+    -webkit-column-gap: 10px;
+    -moz-column-gap:10px;
+    column-gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.choose-city-pop-up-cities li {
+    cursor: pointer;
+}
+.choose-city-pop-up-cities li:hover {
+    color:#fc5c76;
+}
+.ui-widget-content {
+    width: 80%;
+    max-width: 600px;
+    z-index: 11;
+    padding: 0 12px 0 12px;
+    font: 14px "Myriad Pro Regular";
+    list-style: none;
+    color: #000;
+    background: #fc5c76;
+}
+.ui-menu-item {
+    padding: 10px 5px;
+}
+.form-input {
+    padding:0 20px;
+    background: none;
+    border:solid 1px #fc5c76;
+    color:#fff;
+    height: 40px;
+    width: 80%;
+    max-width: 600px;
+    font: 14px "Myriad Pro Regular";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.girl-sorting-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font: 16px "HelveticaNeueCyr", sans-serif;
+    color:#fff;
+}
+.girl-sorting-list li {
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 95px;
+    text-align: center;
+}
+.girl-sorting-list li:first-child {
+    padding:14px 0 8px;
+}
+.girl-sorting-list li + li {
+    margin-right: -29px;
+}
+.girl-sorting-list li a {
+    min-width: 95px;
+    color:#fff;
+    display: block;
+    text-decoration: none;
+    padding:14px 30px 8px;
+    position: relative;
+}
+.girl-sorting-list li a span {
+    position: relative;
+}
+.girl-sorting-list li a.active:before, .girl-sorting-list li a:hover:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 65px;
+    right: 29px;
+    height: 100%;
+    background: url(../img/btn-c.png) repeat-x;
+}
+.girl-sorting-list li a:hover, .girl-sorting-list li a.active {
+    background: url(../img/btn-l.png) no-repeat 0 0, url(../img/btn-r.png) no-repeat 100% 0;
+}
 @media (max-width: 1150px) {
     .girl-catalog-block .we-work, .girl-catalog-block .go-to-the-catalog {
         font-size: 14px;
@@ -817,7 +950,7 @@ footer {
         padding-top: 30px;
     }
     .main-block {
-        margin-top: -92px;
+        margin-top: -94px;
     }
     .cst-left-phone-number {
         margin-right: 0;
