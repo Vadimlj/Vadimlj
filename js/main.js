@@ -362,6 +362,7 @@ $(window).on('load', function () {
         $svg_anm.fadeOut('slow');
         $preloader.delay(500).fadeOut('slow');
         $pree.delay(600).fadeOut('slow');
+        new WOW().init();
     }, 1000)
 });
 

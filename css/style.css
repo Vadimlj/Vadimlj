@@ -640,7 +640,7 @@ footer {
     flex-wrap: wrap;
     max-width: 360px;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     -ms-align-items: center;
     align-items: center;
     flex: 0 0 auto;
@@ -728,7 +728,7 @@ footer {
 .prod-page .prod-top-part--left__list ul li::before {
     width: 4px;
     height: 4px;
-    margin-top: 7px;
+    margin-top: 9px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -740,14 +740,14 @@ footer {
     margin-right: 6px;
 }
 .winda .prod-page .prod-top-part--left__list ul li::before  {
-    margin-top: 5px;
+    margin-top: 8px;
 }
 .prod-page .prod-top-part--right {
     padding-top: 17px;
 }
 
 .prod-page .prod-top-part--right__text {
-    font: 16px "Myriad Pro Regular";
+    font: 18px "Myriad Pro Regular";
     color: white;
     line-height: 1.5;
     padding-left: 104px;
@@ -1054,9 +1054,6 @@ footer {
     position: fixed;
     top:50% !important;
     transform:translateY(-50%);
-}
-.mainGall {
-    max-width:196px;
 }
 .mainGall .owl-stage {
     display: flex;
@@ -1534,7 +1531,7 @@ footer {
         transform:translateY(-50%);
     }
     .prod-bot-mobile-text {
-        font: 11px/1.5 "Myriad Pro Regular";
+        font: 14px/1.5 "Myriad Pro Regular";
         color:#fff;
         padding: 25px 0 0;
         margin-bottom: 6px;
