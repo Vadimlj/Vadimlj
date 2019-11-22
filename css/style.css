@@ -718,10 +718,10 @@ footer {
     display: -ms-flex;
     display: -o-flex;
     display: flex;
-    margin-left: 30px;
+    margin-right: 30px;
 }
 
-.prod-page .prod-top-part--left__list ul li:first-child {
+.prod-page .prod-top-part--left__list ul li:last-child {
     margin-left: 0;
 }
 
@@ -1054,6 +1054,9 @@ footer {
     position: fixed;
     top:50% !important;
     transform:translateY(-50%);
+}
+.mainGall {
+    max-width:196px;
 }
 .mainGall .owl-stage {
     display: flex;
@@ -1842,8 +1845,5 @@ footer {
         -ms-flex-wrap: wrap;
         -o-flex-wrap: wrap;
         flex-wrap: wrap;
-    }
-    .prod-page .prod-top-part--left__list ul li:last-child {
-        margin-left: 0;
     }
 }

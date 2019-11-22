@@ -108,7 +108,11 @@ $(function () {
         });
     });
     if ($('.prod-bot-part-js img').length) {
-        $('.prod-bot-part-js img').each(function(){
+        $('.prod-bot-part-js img').each(function(i){
+            if(i+1 > 4) {
+                return false;
+            }
+
             $('.mainGall').append($(this).clone());
         });
 
