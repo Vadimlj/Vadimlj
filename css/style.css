@@ -787,25 +787,26 @@ footer {
     grid-gap: 50px;
 }
 
+
 .prod-page .prod-bot-part--in div {
     margin-bottom: 60px;
-    padding-bottom: 36px;
-    display: inline-block;
     vertical-align: top;
     text-align: center;
-    overflow: hidden;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 .prod-page .prod-bot-part--in div a {
     display: block;
     width: 100%;
-    height: 50%;
-    margin-bottom: 36px;
+    height: 47%;
+    margin-bottom: 12%;
     overflow: hidden;
     text-align: center;
     position: relative;
 }
-.prod-page .prod-bot-part--in div a:after {
+/*.prod-page .prod-bot-part--in div a:after {
     content: "";
     opacity: 0;
     position: absolute;
@@ -815,21 +816,33 @@ footer {
     height: 100%;
     box-shadow: inset 0 0 0 2px #fc5c76;
     transition: opacity .3s linear;
-}
+}*/
 .prod-page .prod-bot-part--in div a:hover:after {
     opacity: 1;
 }
 .prod-page .prod-bot-part--in div img {
-    cursor: pointer;
+/*    cursor: pointer;
     height: 110%;
     width: auto;
     position: relative;
     left: 50%;
     top: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .prod-page .prod-bot-part--in div a:last-child {
     margin-bottom: 0;
+}
+
+.prod-page .prod-bot-part--in div:nth-child(2) a {
+    margin-top: 8%;
+    margin-bottom: 0;
+}
+
+.prod-page .prod-bot-part--in div:nth-child(2) a:first-child {
+    margin-top: 0;
 }
 
 .prod-page .prod-bot-part--in div:first-child a {
@@ -837,7 +850,7 @@ footer {
 }
 
 .prod-page .prod-bot-part--in div:first-child a:first-child {
-    height: 70%;
+    height: 64%;
 }
 
 .prod-page .prod-bot-part--in div:nth-child(3n-2) a {
@@ -845,11 +858,11 @@ footer {
 }
 
 .prod-page .prod-bot-part--in div:nth-child(3n-2) a:first-child {
-    height: 70%;
+    height: 64%;
 }
 
 .prod-page .prod-bot-part--in div:nth-child(3n) a {
-    height: 70%;
+    height: 64%;
 }
 
 .prod-page .prod-bot-part--in div:nth-child(3n) a:first-child {
@@ -859,6 +872,77 @@ footer {
 .prod-page .prod-bot-part img {
     font-size: 0;
 }
+
+.prod-page .prod-bot-part--in div a:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    bottom: 0;
+    content: '';
+    background: #fc5c76;
+    height: 0;
+    transition: height 0.3s ease;
+    z-index: 1;
+}
+.prod-page .prod-bot-part--in div a:hover:before {
+    height: 100%;
+}
+.prod-page .prod-bot-part--in div a:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    content: '';
+    background: #fc5c76;
+    transition: all 0.3s linear;
+    width: 0;
+    z-index: 1;
+}
+
+.prod-page .prod-bot-part--in .bot-r {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+}
+
+.prod-page .prod-bot-part--in .bot-r:before {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    bottom: 0;
+    content: '';
+    background: #fc5c76;
+    height: 0;
+    transition: height 0.3s ease;
+}
+
+.prod-page .prod-bot-part--in .bot-r:after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    content: '';
+    background: #fc5c76;
+    transition: all 0.3s linear;
+    width: 0;
+    z-index: 3;
+}
+.prod-page .prod-bot-part--in div a:hover .bot-r:before {
+    height: 100%;
+}
+.prod-page .prod-bot-part--in div a:hover .bot-r:after {
+    width: 100%;
+}
+
+.prod-page .prod-bot-part--in div a:hover:after {
+    width: 100%;
+}
+
 .choose-city-pop-up {
     display: none;
     position: fixed;
@@ -970,6 +1054,30 @@ footer {
     position: fixed;
     top:50% !important;
     transform:translateY(-50%);
+}
+.mainGall .owl-stage {
+    display: flex;
+}
+.mainGall .owl-stage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.mainGall.owl-carousel button.owl-dot {
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius:6px;
+}
+.mainGall.owl-carousel button.owl-dot + button.owl-dot {
+    margin-left: 4px;
+}
+.mainGall.owl-carousel button.owl-dot.active {
+    background: #fc5c76;
+}
+.mainGall.owl-carousel .owl-dots {
+    text-align: center;
+    padding-top: 5px;
 }
 @media (max-width: 1150px) {
     .we-work, .girl-catalog-block .go-to-the-catalog {
@@ -1376,6 +1484,11 @@ footer {
         padding-top: 122px;
     }
 }
+@media (min-width: 576px) {
+    .d-sm-grid {
+        display: grid !important;
+    }
+}
 @media (max-width: 575px) {
     .owl-carousel {
         display: none;
@@ -1416,6 +1529,12 @@ footer {
         left: -18px;
         top: 50%;
         transform:translateY(-50%);
+    }
+    .prod-bot-mobile-text {
+        font: 11px/1.5 "Myriad Pro Regular";
+        color:#fff;
+        padding: 25px 0 0;
+        margin-bottom: 6px;
     }
 }
 @media (max-width: 380px) {
@@ -1635,5 +1754,96 @@ footer {
     }
     .girl img {
         width: 100%;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .prod-page .prod-inner {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .prod-page .prod-bot-part--in {
+        grid-template-columns: 1fr 1fr;
+    }
+    .prod-page .prod-bot-part--in div {
+        margin-bottom: 0;
+    }
+    .prod-page .prod-bot-part--in {
+        margin-bottom: 40px;
+    }
+    .prod-page .prod-top-part--right {
+        padding-top: 12px;
+    } 
+    .prod-page .prod-top-part--right__text {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media (max-width: 767px) {
+    .prod-page .prod-bot-part--in {
+        grid-gap: 30px
+    }
+    .prod-page .prod-bot-part--in div a {
+        margin-bottom: 30px;
+    }
+    .prod-page .prod-bot-part--in div a {
+        height: 48%;
+    }
+    .prod-page .prod-top-part {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    .prod-page .prod-top-part--right {
+        display: none;
+    }
+}
+
+@media (max-width: 490px) {
+    .prod-page .prod-bot-part--in {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 479px) {
+    .prod-page .prod-top-part--left__info .name {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+    .prod-page .prod-top-part--left__info .desc {
+        font-size: 12px;
+    }
+    .prod-page .prod-top-part--left {
+        width: 100%;
+    }
+    .prod-top-part--left__pic {
+        max-width: 100px;
+    }
+    .prod-top-part--left__pic img {
+        width: 100%;
+    }
+    .prod-page .prod-top-part--left__info ul {
+        padding-top: 5px;
+    }
+    .prod-page .prod-top-part--left__info {
+        padding-left: 15px;
+    }
+    .prod-page .prod-top-part--left__info ul {
+        font-size: 12px;
+    }
+    .prod-page .prod-top-part--left__list ul {
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -o-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .prod-page .prod-top-part--left__list ul li:last-child {
+        margin-left: 0;
     }
 }

@@ -198,6 +198,7 @@
     display: inline-block;
     width: 100%;
     max-width: 400px;
+    text-align: left;
 }
 .jq-selectbox__select {
     height: 28px;

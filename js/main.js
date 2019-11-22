@@ -107,6 +107,21 @@ $(function () {
 
         });
     });
+    if ($('.prod-bot-part-js img').length) {
+        $('.prod-bot-part-js img').each(function(){
+            $('.mainGall').append($(this).clone());
+        });
+
+
+        $('.mainGall').owlCarousel({
+            loop:true,
+            margin:10,
+            items:1,
+            nav:true,
+            dots: true
+        });
+    }
+
 
     var tunner = check_width(576);
     if (tunner) {
@@ -345,3 +360,4 @@ $(window).on('load', function () {
         $pree.delay(600).fadeOut('slow');
     }, 1000)
 });
+
