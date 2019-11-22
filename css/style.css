@@ -263,7 +263,7 @@ h1 span{
     position: fixed;
     right: 11%;
     bottom: 50px;
-    z-index: 999;
+    z-index: 1;
     width: 15px;
     height: 24px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='0.529cm' height='0.811cm'%3E%3Cpath fill-rule='evenodd' fill='rgb(255, 255, 255)' d='M15.000,15.780 L7.917,22.828 C7.687,23.057 7.313,23.057 7.083,22.828 L-0.000,15.780 L0.835,14.950 L6.923,21.008 L6.923,0.000 L8.077,0.000 L8.077,21.008 L14.165,14.950 L15.000,15.780 Z'/%3E%3C/svg%3E");
@@ -729,7 +729,7 @@ footer {
 .prod-page .prod-top-part--left__list ul li::before {
     width: 4px;
     height: 4px;
-    margin-top: 5px;
+    margin-top: 7px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -740,14 +740,15 @@ footer {
     vertical-align: middle;
     margin-right: 6px;
 }
-
+.winda .prod-page .prod-top-part--left__list ul li::before  {
+    margin-top: 5px;
+}
 .prod-page .prod-top-part--right {
     padding-top: 17px;
 }
 
 .prod-page .prod-top-part--right__text {
-    font-size: 16px;
-    font-family: "Myriad Pro";
+    font: 16px "Myriad Pro Regular";
     color: white;
     line-height: 1.5;
     padding-left: 104px;
@@ -764,19 +765,22 @@ footer {
     color: #fff;
     text-decoration: none;
 }
-
+.prod-page .prod-top-part--right__text a:hover {
+    color:#fc5c76;
+}
 .prod-page .prod-top-part--right__text a::after {
     content: '';
-    width: 6px;
+    width: 7px;
     height: 11px;
-    background: url(../img/arrow-point-to-right.svg) 100% center no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6.687' height='11' viewBox='0 0 6.687 11'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; fill-rule: evenodd; %7D %3C/style%3E%3C/defs%3E%3Cpath id='Back_копия_5' data-name='Back копия 5' class='cls-1' d='M108.036,327l5.822,5.194a0.4,0.4,0,0,1,0,.612L108.036,338l-0.686-.612,5.479-4.888-5.479-4.888Z' transform='translate(-107.344 -327)'/%3E%3C/svg%3E%0A");
     display: inline-block;
     vertical-align: middle;
-    -webkit-background-size: 9px;
-    background-size: 9px;
+    background-size: 7px 11px;
     margin-left: 6px;
 }
-
+.prod-page .prod-top-part--right__text a:hover:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6.687' height='11' viewBox='0 0 6.687 11'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fc5c76; fill-rule: evenodd; %7D %3C/style%3E%3C/defs%3E%3Cpath id='Back_копия_5' data-name='Back копия 5' class='cls-1' d='M108.036,327l5.822,5.194a0.4,0.4,0,0,1,0,.612L108.036,338l-0.686-.612,5.479-4.888-5.479-4.888Z' transform='translate(-107.344 -327)'/%3E%3C/svg%3E%0A");
+}
 .prod-page .prod-bot-part--in {
     font-size: 0;
     display: grid;
@@ -786,44 +790,70 @@ footer {
 
 .prod-page .prod-bot-part--in div {
     margin-bottom: 60px;
+    padding-bottom: 36px;
     display: inline-block;
     vertical-align: top;
     text-align: center;
     overflow: hidden;
-}
 
-.prod-page .prod-bot-part--in div img {
-    margin-bottom: 36px;
+}
+.prod-page .prod-bot-part--in div a {
+    display: block;
     width: 100%;
     height: 50%;
-    object-fit: cover;
+    margin-bottom: 36px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
 }
-
-.prod-page .prod-bot-part--in div img:last-child {
+.prod-page .prod-bot-part--in div a:after {
+    content: "";
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 0 2px #fc5c76;
+    transition: opacity .3s linear;
+}
+.prod-page .prod-bot-part--in div a:hover:after {
+    opacity: 1;
+}
+.prod-page .prod-bot-part--in div img {
+    cursor: pointer;
+    height: 110%;
+    width: auto;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.prod-page .prod-bot-part--in div a:last-child {
     margin-bottom: 0;
 }
 
-.prod-page .prod-bot-part--in div:first-child img {
+.prod-page .prod-bot-part--in div:first-child a {
     height: 30%;
 }
 
-.prod-page .prod-bot-part--in div:first-child img:first-child {
+.prod-page .prod-bot-part--in div:first-child a:first-child {
     height: 70%;
 }
 
-.prod-page .prod-bot-part--in div:nth-child(3n-2) img {
+.prod-page .prod-bot-part--in div:nth-child(3n-2) a {
     height: 30%;
 }
 
-.prod-page .prod-bot-part--in div:nth-child(3n-2) img:first-child {
+.prod-page .prod-bot-part--in div:nth-child(3n-2) a:first-child {
     height: 70%;
 }
 
-.prod-page .prod-bot-part--in div:nth-child(3n) img {
+.prod-page .prod-bot-part--in div:nth-child(3n) a {
     height: 70%;
 }
 
-.prod-page .prod-bot-part--in div:nth-child(3n) img:first-child {
+.prod-page .prod-bot-part--in div:nth-child(3n) a:first-child {
     height: 30%;
 }
 
@@ -936,6 +966,11 @@ footer {
 }
 .girl-sorting-list li a:hover, .girl-sorting-list li a.active {
     background: url(../img/btn-l.png) no-repeat 0 0, url(../img/btn-r.png) no-repeat 100% 0;
+}
+#lightbox {
+    position: fixed;
+    top:50% !important;
+    transform:translateY(-50%);
 }
 @media (max-width: 1150px) {
     .girl-catalog-block .we-work, .girl-catalog-block .go-to-the-catalog {
@@ -1087,10 +1122,32 @@ footer {
     li.mobile-show {
         font: 21px "Myriad Pro Regular", sans-serif;
         color:#fff;
-        background: #0a0a0a;
         display:block !important;
         margin: 0 -86px 0 -15px;
         padding: 20px 86px 16px 25px;
+    }
+    li.nav-item-call {
+        font: 15px "Myriad Pro Regular", sans-serif;
+        text-decoration: none;
+        margin: 22px 0 0;
+        padding: 0;
+    }
+    li.nav-item-call .nav-link:after {
+        position: relative;
+        top: -2px;
+        content:'';
+        display: inline-block;
+        vertical-align: middle;
+        height: 11px;
+        width: 7px;
+        margin-left: 2px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6.687' height='11' viewBox='0 0 6.687 11'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fff; fill-rule: evenodd; %7D %3C/style%3E%3C/defs%3E%3Cpath id='Back_копия_5' data-name='Back копия 5' class='cls-1' d='M108.036,327l5.822,5.194a0.4,0.4,0,0,1,0,.612L108.036,338l-0.686-.612,5.479-4.888-5.479-4.888Z' transform='translate(-107.344 -327)'/%3E%3C/svg%3E%0A");
+    }
+    li.nav-item-call .nav-link:hover:after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6.687' height='11' viewBox='0 0 6.687 11'%3E%3Cdefs%3E%3Cstyle%3E .cls-1 %7B fill: %23fc5c76; fill-rule: evenodd; %7D %3C/style%3E%3C/defs%3E%3Cpath id='Back_копия_5' data-name='Back копия 5' class='cls-1' d='M108.036,327l5.822,5.194a0.4,0.4,0,0,1,0,.612L108.036,338l-0.686-.612,5.479-4.888-5.479-4.888Z' transform='translate(-107.344 -327)'/%3E%3C/svg%3E%0A");
+    }
+    .navbar-light .navbar-nav li.nav-item-call .nav-link {
+        border-bottom: none;
     }
     .cst-menu-style li {
         padding-right: 0;
@@ -1133,7 +1190,7 @@ footer {
     .cst-header-text-data {
         position: absolute;
         left: 0;
-        bottom: 0;
+        bottom: 6%;
         z-index: 1;
         padding-top: 0;
         padding-bottom: 22px;
@@ -1174,7 +1231,7 @@ footer {
         padding-top: 58px;
     }
     .cst-header-text-data h1 {
-        font-size:24px;
+        font-size:27px;
         line-height: 1;
         margin-bottom: 9px;
     }
@@ -1320,6 +1377,14 @@ footer {
     }
 }
 
+@media screen and (max-height: 700px) {
+    .cst-header-text-data {
+        bottom: 3%;
+    }
+    .cst-header-text-data h1 {
+        font-size: 24px;
+    }
+}
 
 .cat::before {
     content: '';

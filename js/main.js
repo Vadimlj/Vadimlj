@@ -68,6 +68,10 @@ function showError(error) {
 }
 
 $(function () {
+    var os = window.navigator.platform;
+    if (/win/i.test(os)) {
+        $('body').addClass('winda');
+    }
     function check_width(width) {
         var windowH = $(window).width();
         if(windowH<width) {
@@ -87,7 +91,20 @@ $(function () {
 
     $(document).ready(function(){
         $('.navbar-toggler').click(function(){
-            $(this).toggleClass('open');
+            if($(this).hasClass('open')) {
+                $(this).removeClass('open');
+                $.fn.fullpage.setAutoScrolling(true);
+                $('body').css({
+                    "overflow" : "inherit"
+                });
+            } else {
+                $(this).addClass('open');
+                $.fn.fullpage.setAutoScrolling(false);
+                $('body').css({
+                    "overflow" : "hidden"
+                });
+            }
+
         });
     });
 
@@ -142,11 +159,17 @@ $(function () {
     $('.city-chose-js').on('click', function(){
         $('.choose-city-pop-up').fadeIn(300);
         $.fn.fullpage.setAutoScrolling(false);
+        $('body').css({
+            "overflow" : "hidden"
+        });
     });
     $('.choose-city-pop-up-close').on('click', function(){
         var parent = $(this).parents('.choose-city-pop-up');
         $.fn.fullpage.setAutoScrolling(true);
         parent.fadeOut(300);
+        $('body').css({
+            "overflow" : "inherit"
+        });
     });
 
     var availableTags = [
@@ -303,6 +326,11 @@ $(function () {
             console.error("Geolocation is not supported by this browser!");
         }
     }
+
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true
+    })
 });
 
 $(window).on('load', function () {
