@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/fullpage.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="css/form.styler.min.css">
+    <link rel="stylesheet" href="css/form.styler.theme.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="inner_page">
@@ -60,10 +63,11 @@
 <main>
     <div class="container catalog-container">
         <div class="row h1-wr">
-            <div class="col-12"><h1>Наши девушки</h1></div>
+            <div class="col-12"><h1>Наши <span>девушки</span></h1></div>
+            <div class="col-12 d-block d-md-none"><p class="we-work">Мы работаем чтобы вы отдыхали</p></div>
         </div>
         <div class="row girl-sorting">
-            <div class="col-12">
+            <div class="col-12 d-none d-md-block">
                 <ul class="girl-sorting-list">
                     <li>Сортировать</li>
                     <li><a class="active" href=""><span>Рост</span></a></li>
@@ -72,8 +76,17 @@
                     <li><a href=""><span>Возраст</span></a></li>
                 </ul>
             </div>
+            <div class="col-12 text-center d-block d-md-none">
+                <select class="sorting-select sorting-js" data-placeholder="Сортировать">
+                    <option></option>
+                    <option value="Рост">Рост</option>
+                    <option value="Вес">Вес</option>
+                    <option value="Бюст">Бюст</option>
+                    <option value="Возраст">Возраст</option>
+                </select>
+            </div>
         </div>
-        <div class="row girl-catalog">
+        <div class="row girl-catalog owl-carousel girl-catalog-js">
             <div class="col-12  col-sm-6 col-lg-3">
                 <div class="girl-img-cart-catalog">
                     <img src="img/girl-cart.png" alt="">
@@ -299,7 +312,13 @@
                 </div>
             </div>
         </div>
-        <div class="container-load-more">
+
+        <div class="container-load-more d-flex d-md-none">
+            <div class="load-more-mobile">
+                <a href="#" class="call-header-btn-mobile">Смотреть</a>
+            </div>
+        </div>
+        <div class="container-load-more d-none d-md-flex">
             <div class="load-more">
                 <a href="#" class="call-header-btn">Смотреть еще</a>
             </div>
@@ -355,11 +374,13 @@
         <input class="form-input form-input--city-choose form-city-js ui-autocomplete-input" placeholder="Выберите город" type="text" autocomplete="off">
     </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/lightbox-plus-jquery.min.js"></script>
 <script src="js/fulpage.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
 <script src="js/slim.scroll.min.js"></script>
 <script src="js/jq_ui.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+
 <script src="js/main.js"></script>
 </body>
 </html>

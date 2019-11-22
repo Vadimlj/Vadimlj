@@ -330,7 +330,9 @@ $(function () {
     lightbox.option({
         'resizeDuration': 200,
         'wrapAround': true
-    })
+    });
+
+    $('select.sorting-js').styler();
 });
 
 $(window).on('load', function () {
