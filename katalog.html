@@ -71,26 +71,26 @@
             <div class="col-12 d-none d-md-block">
                 <ul class="girl-sorting-list">
                     <li>Сортировать</li>
-                    <li><a class="active" href=""><span>Рост</span></a></li>
-                    <li><a href=""><span>Вес</span></a></li>
-                    <li><a href=""><span>Бюст</span></a></li>
-                    <li><a href=""><span>Возраст</span></a></li>
+                    <li class="girl-sorting-list-js" data-name="tail"><div><span>Рост</span></a></li>
+                    <li class="girl-sorting-list-js" data-name="weight"><div><span>Вес</span></div></li>
+                    <li class="girl-sorting-list-js" data-name="bust"><div><span>Бюст</span></div></li>
+                    <li class="girl-sorting-list-js" data-name="age"><div><span>Возраст</span></div></li>
                 </ul>
             </div>
             <div class="col-12 text-center d-block d-md-none">
                 <select class="sorting-select sorting-js" data-placeholder="Сортировать">
                     <option></option>
-                    <option value="Рост">Рост</option>
-                    <option value="Вес">Вес</option>
-                    <option value="Бюст">Бюст</option>
-                    <option value="Возраст">Возраст</option>
+                    <option value="tail">Рост</option>
+                    <option value="weight">Вес</option>
+                    <option value="bust">Бюст</option>
+                    <option value="age">Возраст</option>
                 </select>
             </div>
         </div>
         <div class="row girl-catalog owl-carousel girl-catalog-js">
-            <div class="col-12  col-sm-6 col-lg-3" data-id="1">
+            <div class="col-12  col-sm-6 col-lg-3 js-sorting-block" data-age="25" data-tail="180" data-weight="75" data-bust="3">
                 <div class="girl-img-cart-catalog">
-                    <img src="img/girl-cart.png" alt="" height="345" width="262">
+                    <img src="img/girl-cart.png" alt="">
                     <div class="girl-data d-flex">
                         <div>
                             <ul>
@@ -116,20 +116,104 @@
                     <div class="bot-r"><div class="t-f"></div></div>
                 </div>
             </div data->
-            <div class="col-12 col-sm-6 col-lg-3" data-id="2">
+            <div class="col-12 col-sm-6 col-lg-3 js-sorting-block" data-age="24" data-tail="181" data-weight="74" data-bust="2">
                 <div class="girl-img-cart-catalog btn-4">
-                    <img src="img/girl-cart-2.jpg" alt="" height="345" width="262">
+                    <img src="img/girl-cart-2.jpg" alt="">
                     <div class="girl-data d-flex">
                         <div>
                             <ul>
                                 <li>
-                                    Возраст  <span>25</span>
+                                    Возраст  <span>24</span>
                                 </li>
                                 <li>
-                                    Рост   <span>180</span>
+                                    Рост   <span>181</span>
                                 </li>
                                 <li>
-                                    Вес  <span>75</span>
+                                    Вес  <span>74</span>
+                                </li>
+                                <li>
+                                    Бюст    <span>2</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bot-pr">
+                            <p class="girl-price">3.000 <span>р/час</span></p>
+                            <a href="#" class="call">Позвонить </a>
+                        </div>
+                    </div>
+                    <div class="bot-r"><div class="t-f"></div></div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 js-sorting-block" data-age="23" data-tail="175" data-weight="50" data-bust="4">
+                <div class="girl-img-cart-catalog btn-4">
+                    <img src="img/girl-cart.png" alt="">
+                    <div class="girl-data d-flex">
+                        <div>
+                            <ul>
+                                <li>
+                                    Возраст  <span>23</span>
+                                </li>
+                                <li>
+                                    Рост   <span>175</span>
+                                </li>
+                                <li>
+                                    Вес  <span>50</span>
+                                </li>
+                                <li>
+                                    Бюст    <span>4</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bot-pr">
+                            <p class="girl-price">3.000 <span>р/час</span></p>
+                            <a href="#" class="call">Позвонить </a>
+                        </div>
+                    </div>
+                    <div class="bot-r"><div class="t-f"></div></div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 js-sorting-block" data-age="26" data-tail="171" data-weight="55" data-bust="2">
+                <div class="girl-img-cart-catalog btn-4">
+                    <img src="img/girl-cart.png" alt="">
+                    <div class="girl-data d-flex">
+                        <div>
+                            <ul>
+                                <li>
+                                    Возраст  <span>26</span>
+                                </li>
+                                <li>
+                                    Рост   <span>171</span>
+                                </li>
+                                <li>
+                                    Вес  <span>55</span>
+                                </li>
+                                <li>
+                                    Бюст    <span>2</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bot-pr">
+                            <p class="girl-price">3.000 <span>р/час</span></p>
+                            <a href="#" class="call">Позвонить </a>
+                        </div>
+                    </div>
+                    <div class="bot-r"><div class="t-f"></div></div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 js-sorting-block" data-age="22" data-tail="184" data-weight="66" data-bust="3">
+                <div class="girl-img-cart-catalog btn-4">
+                    <img src="img/girl-cart-2.jpg" alt="">
+                    <div class="girl-data d-flex">
+                        <div>
+                            <ul>
+                                <li>
+                                    Возраст  <span>22</span>
+                                </li>
+                                <li>
+                                    Рост   <span>184</span>
+                                </li>
+                                <li>
+                                    Вес  <span>66</span>
                                 </li>
                                 <li>
                                     Бюст    <span>3</span>
@@ -144,20 +228,48 @@
                     <div class="bot-r"><div class="t-f"></div></div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-3" data-id="3">
+            <div class="col-12 col-sm-6 col-lg-3 js-sorting-block" data-age="21" data-tail="169" data-weight="50" data-bust="2">
                 <div class="girl-img-cart-catalog btn-4">
-                    <img src="img/girl-cart.png" alt="" width="262" height="345">
+                    <img src="img/girl-cart.png" alt="">
                     <div class="girl-data d-flex">
                         <div>
                             <ul>
                                 <li>
-                                    Возраст  <span>25</span>
+                                    Возраст  <span>21</span>
                                 </li>
                                 <li>
-                                    Рост   <span>180</span>
+                                    Рост   <span>169</span>
                                 </li>
                                 <li>
-                                    Вес  <span>75</span>
+                                    Вес  <span>50</span>
+                                </li>
+                                <li>
+                                    Бюст    <span>2</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bot-pr">
+                            <p class="girl-price">3.000 <span>р/час</span></p>
+                            <a href="#" class="call">Позвонить </a>
+                        </div>
+                    </div>
+                    <div class="bot-r"><div class="t-f"></div></div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3 js-sorting-block" data-age="19" data-tail="169" data-weight="52" data-bust="3">
+                <div class="girl-img-cart-catalog btn-4">
+                    <img src="img/girl-cart.png" alt="">
+                    <div class="girl-data d-flex">
+                        <div>
+                            <ul>
+                                <li>
+                                    Возраст  <span>19</span>
+                                </li>
+                                <li>
+                                    Рост   <span>169</span>
+                                </li>
+                                <li>
+                                    Вес  <span>52</span>
                                 </li>
                                 <li>
                                     Бюст    <span>3</span>
@@ -172,135 +284,23 @@
                     <div class="bot-r"><div class="t-f"></div></div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-3" data-id="4">
+            <div class="col-12 col-sm-6 col-lg-3 js-sorting-block" data-age="27" data-tail="175" data-weight="64" data-bust="2">
                 <div class="girl-img-cart-catalog btn-4">
-                    <img src="img/girl-cart.png" height="345" width="262" alt="">
+                    <img src="img/girl-cart.png" alt="">
                     <div class="girl-data d-flex">
                         <div>
                             <ul>
                                 <li>
-                                    Возраст  <span>25</span>
+                                    Возраст  <span>27</span>
                                 </li>
                                 <li>
-                                    Рост   <span>180</span>
+                                    Рост   <span>175</span>
                                 </li>
                                 <li>
-                                    Вес  <span>75</span>
+                                    Вес  <span>64</span>
                                 </li>
                                 <li>
-                                    Бюст    <span>3</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="bot-pr">
-                            <p class="girl-price">3.000 <span>р/час</span></p>
-                            <a href="#" class="call">Позвонить </a>
-                        </div>
-                    </div>
-                    <div class="bot-r"><div class="t-f"></div></div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3" data-id="5">
-                <div class="girl-img-cart-catalog btn-4">
-                    <img src="img/girl-cart-2.jpg" height="345" width="262" alt="">
-                    <div class="girl-data d-flex">
-                        <div>
-                            <ul>
-                                <li>
-                                    Возраст  <span>25</span>
-                                </li>
-                                <li>
-                                    Рост   <span>180</span>
-                                </li>
-                                <li>
-                                    Вес  <span>75</span>
-                                </li>
-                                <li>
-                                    Бюст    <span>3</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="bot-pr">
-                            <p class="girl-price">3.000 <span>р/час</span></p>
-                            <a href="#" class="call">Позвонить </a>
-                        </div>
-                    </div>
-                    <div class="bot-r"><div class="t-f"></div></div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3" data-id="6">
-                <div class="girl-img-cart-catalog btn-4">
-                    <img src="img/girl-cart.png" height="345" width="262" alt="">
-                    <div class="girl-data d-flex">
-                        <div>
-                            <ul>
-                                <li>
-                                    Возраст  <span>25</span>
-                                </li>
-                                <li>
-                                    Рост   <span>180</span>
-                                </li>
-                                <li>
-                                    Вес  <span>75</span>
-                                </li>
-                                <li>
-                                    Бюст    <span>3</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="bot-pr">
-                            <p class="girl-price">3.000 <span>р/час</span></p>
-                            <a href="#" class="call">Позвонить </a>
-                        </div>
-                    </div>
-                    <div class="bot-r"><div class="t-f"></div></div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3" data-id="7">
-                <div class="girl-img-cart-catalog btn-4">
-                    <img src="img/girl-cart.png" height="345" width="262" alt="">
-                    <div class="girl-data d-flex">
-                        <div>
-                            <ul>
-                                <li>
-                                    Возраст  <span>25</span>
-                                </li>
-                                <li>
-                                    Рост   <span>180</span>
-                                </li>
-                                <li>
-                                    Вес  <span>75</span>
-                                </li>
-                                <li>
-                                    Бюст    <span>3</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="bot-pr">
-                            <p class="girl-price">3.000 <span>р/час</span></p>
-                            <a href="#" class="call">Позвонить </a>
-                        </div>
-                    </div>
-                    <div class="bot-r"><div class="t-f"></div></div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-3" data-id="8">
-                <div class="girl-img-cart-catalog btn-4">
-                    <img src="img/girl-cart.png" height="345" width="262" alt="">
-                    <div class="girl-data d-flex">
-                        <div>
-                            <ul>
-                                <li>
-                                    Возраст  <span>25</span>
-                                </li>
-                                <li>
-                                    Рост   <span>180</span>
-                                </li>
-                                <li>
-                                    Вес  <span>75</span>
-                                </li>
-                                <li>
-                                    Бюст    <span>3</span>
+                                    Бюст    <span>2</span>
                                 </li>
                             </ul>
                         </div>

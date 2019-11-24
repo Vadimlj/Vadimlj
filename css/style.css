@@ -1039,18 +1039,19 @@ footer {
 .girl-sorting-list li + li {
     margin-right: -29px;
 }
-.girl-sorting-list li a {
+.girl-sorting-list li div {
     min-width: 95px;
     color:#fff;
     display: block;
     text-decoration: none;
     padding:14px 30px 8px;
     position: relative;
+    cursor: pointer;
 }
-.girl-sorting-list li a span {
+.girl-sorting-list li div span {
     position: relative;
 }
-.girl-sorting-list li a.active:before, .girl-sorting-list li a:hover:before {
+.girl-sorting-list li.active div:before, .girl-sorting-list li:hover div:before {
     content: '';
     position: absolute;
     top: 0;
@@ -1059,7 +1060,7 @@ footer {
     height: 100%;
     background: url(../img/btn-c.png) repeat-x;
 }
-.girl-sorting-list li a:hover, .girl-sorting-list li a.active {
+.girl-sorting-list li:hover div, .girl-sorting-list li.active div {
     background: url(../img/btn-l.png) no-repeat 0 0, url(../img/btn-r.png) no-repeat 100% 0;
 }
 #lightbox {
