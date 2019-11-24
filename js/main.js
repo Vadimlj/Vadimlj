@@ -352,6 +352,14 @@ $(function () {
     });
 
     $('select.sorting-js').styler();
+
+    $('.load-more-product-img-js').on("click", function(){
+        $('.prod-bot-part--in-more').fadeIn(200).css({
+            "display" : "flex"
+        });
+        $(this).parents('.container-load-more-product').addClass('hide_imporatnt');
+        return false;
+    });
 });
 
 $(window).on('load', function () {
