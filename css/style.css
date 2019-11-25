@@ -539,7 +539,8 @@ h1 span{
     align-items: center;
     position: relative;
 }
-.section2 .fp-tableCell {
+
+.section2, .section2 .fp-tableCell {
     height: auto !important;
 }
 
@@ -1427,6 +1428,7 @@ footer {
     }
     .go-to-the-catalog2 {
         padding-top: 26px;
+        padding-bottom: 55px;
     }
     .right-phone-footer ul li a:first-child {
         margin: 0;
@@ -1527,7 +1529,7 @@ footer {
         box-sizing: border-box;
     }
     .girl-img-cart-catalog {
-        margin-bottom: 0;
+        margin-bottom: 30px;
     }
     .catalog-container, .prod-page .prod-inner  {
         padding-left: 38px;
