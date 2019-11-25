@@ -1529,6 +1529,9 @@ footer {
         box-sizing: border-box;
     }
     .girl-img-cart-catalog {
+        margin-bottom:0;
+    }
+    .girl-catalog-m .girl-img-cart-catalog {
         margin-bottom: 30px;
     }
     .catalog-container, .prod-page .prod-inner  {
