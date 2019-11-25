@@ -95,7 +95,7 @@ $(function () {
                 $(this).removeClass('open');
                 $.fn.fullpage.setAutoScrolling(true);
                 $('body').css({
-                    "overflow" : "inherit"
+                    "overflow" : "auto"
                 });
             } else {
                 $(this).addClass('open');
@@ -223,7 +223,7 @@ $(function () {
         $.fn.fullpage.setAutoScrolling(true);
         parent.fadeOut(300);
         $('body').css({
-            "overflow" : "inherit"
+            "overflow" : "auto"
         });
     });
 
