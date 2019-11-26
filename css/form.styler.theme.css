@@ -197,7 +197,7 @@
 .sorting-select {
     display: inline-block;
     width: 100%;
-    max-width: 230px;
+    max-width: 499px;
     margin: 0 7px;
     text-align: left;
 }
@@ -233,7 +233,7 @@
 }
 .jq-selectbox__select-text {
     display: block;
-    width: 100%;
+    width: 100% !important;
     box-shadow: inset 0 0 0 2px #fff;
     padding-left: 12px;
 }

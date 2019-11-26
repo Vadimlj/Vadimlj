@@ -366,6 +366,14 @@ h1 span{
     transform: translateY(-120%);
     transition: 0.3s ease-in-out;
 }
+.girl-img-cart-catalog > a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
 .girl-img-cart-catalog:hover .bot-r .t-f {
     transform: translateY(0);
 }
@@ -1892,4 +1900,7 @@ footer {
 }
 .hide_imporatnt {
     display:none !important;
+}
+.show_inportant {
+    display: block !important;
 }
