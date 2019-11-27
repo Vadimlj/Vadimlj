@@ -833,17 +833,55 @@ footer {
     text-align: center;
     position: relative;
 }
-/*.prod-page .prod-bot-part--in div a:after {
-    content: "";
-    opacity: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
+.girl-img-cart-catalog-vonka .girl-img-cart-catalog .bot-r .t-f {
+    top: 27px;
+    margin-left: -88px;
+    transform: translateY(-140%);
+}
+.girl-img-cart-catalog-tarasova .girl-img-cart-catalog .bot-r .t-f{
+    top: 27px;
+    transform: translateY(-140%);
+}
+.girl-img-cart-catalog-katayeva .girl-img-cart-catalog .bot-r .t-f {
+    top: 50px;
+    transform: translateY(-200%);
+}
+.girl-img-cart-catalog-popova .girl-img-cart-catalog .bot-r .t-f {
+
+}
+.girl-img-cart-catalog-sozinova .girl-img-cart-catalog .bot-r .t-f {
+    transform: translateY(-220%);
+    top: 76px;
+    margin-left: -103px;
+}
+.girl-img-cart-catalog-vonka .girl-img-cart-catalog:hover .bot-r .t-f,
+.girl-img-cart-catalog-tarasova .girl-img-cart-catalog:hover .bot-r .t-f,
+.girl-img-cart-catalog-katayeva .girl-img-cart-catalog:hover .bot-r .t-f,
+.girl-img-cart-catalog-popova .girl-img-cart-catalog:hover .bot-r .t-f,
+.girl-img-cart-catalog-sozinova .girl-img-cart-catalog:hover .bot-r .t-f
+{
+    transform: translateY(0);
+}
+.prod-top-part--left__pic {
+    position: relative;
+    max-width: 150px;
+}
+.prod-top-part--left__pic img {
+    max-width: 100%;
     height: 100%;
-    box-shadow: inset 0 0 0 2px #fc5c76;
-    transition: opacity .3s linear;
-}*/
+    object-fit: cover;
+}
+.prod-top-part--left__pic:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: url(../img/to-face.png) no-repeat 0 0;
+    width: 70%;
+    height: 45%;
+    background-size: 100%;
+}
 .prod-page .prod-bot-part--in div a:hover:after {
     opacity: 1;
 }
@@ -851,7 +889,6 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: blur(2px);
 }
 .prod-page .prod-bot-part--in div a:last-child {
     margin-bottom: 0;
@@ -1868,6 +1905,7 @@ footer {
     }
     .prod-top-part--left__pic {
         max-width: 100px;
+        position: relative;
     }
     .prod-top-part--left__pic img {
         width: 100%;
