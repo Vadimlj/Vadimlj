@@ -854,11 +854,37 @@ footer {
     top: 76px;
     margin-left: -103px;
 }
+.girl-img-cart-catalog-nikonova .girl-img-cart-catalog .bot-r .t-f {
+    transform: translateY(-120%);
+    top: 18px;
+    margin-left: -93px;
+}
+.girl-img-cart-catalog-biata .girl-img-cart-catalog .bot-r .t-f {
+    top: 76px;
+    transform: translateY(-220%);
+}
+.girl-img-cart-catalog-knazkova .girl-img-cart-catalog .bot-r .t-f {
+    top: 50px;
+    transform: translateY(-200%);
+}
+.girl-img-cart-catalog-cherry .girl-img-cart-catalog .bot-r .t-f {
+    top: 45px;
+    transform: translateY(-200%);
+}
+.girl-img-cart-catalog-nikonchuk .girl-img-cart-catalog .bot-r .t-f {
+    top: 55px;
+    transform: translateY(-200%);
+}
 .girl-img-cart-catalog-vonka .girl-img-cart-catalog:hover .bot-r .t-f,
 .girl-img-cart-catalog-tarasova .girl-img-cart-catalog:hover .bot-r .t-f,
 .girl-img-cart-catalog-katayeva .girl-img-cart-catalog:hover .bot-r .t-f,
 .girl-img-cart-catalog-popova .girl-img-cart-catalog:hover .bot-r .t-f,
-.girl-img-cart-catalog-sozinova .girl-img-cart-catalog:hover .bot-r .t-f
+.girl-img-cart-catalog-sozinova .girl-img-cart-catalog:hover .bot-r .t-f,
+.girl-img-cart-catalog-nikonova .girl-img-cart-catalog:hover .bot-r .t-f,
+.girl-img-cart-catalog-biata .girl-img-cart-catalog:hover .bot-r .t-f,
+.girl-img-cart-catalog-knazkova .girl-img-cart-catalog:hover .bot-r .t-f,
+.girl-img-cart-catalog-cherry .girl-img-cart-catalog:hover .bot-r .t-f,
+.girl-img-cart-catalog-nikonchuk .girl-img-cart-catalog:hover .bot-r .t-f
 {
     transform: translateY(0);
 }
