@@ -391,7 +391,9 @@ $(function () {
         'resizeDuration': 200,
         'wrapAround': true
     });
-
+    if ($('.prod-bot-part--in-more').length == 0) {
+        $('.load-more-product-img-js').parents('.container-load-more-product').addClass('hide_imporatnt');
+    }
     $('.load-more-product-img-js').on("click", function(){
         $('.prod-bot-part--in-more').fadeIn(200).css({
             "display" : "flex"
