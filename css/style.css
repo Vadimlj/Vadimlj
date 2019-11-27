@@ -1647,6 +1647,9 @@ footer {
     .owl-item > div {
         padding: 0 22px;
     }
+    .owl-item > div {
+        display: block !important;
+    }
     .mainGall.owl-carousel.owl-loaded {
         padding: 0 22px;
     }
