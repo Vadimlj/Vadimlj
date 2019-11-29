@@ -646,7 +646,6 @@ footer {
     display: -ms-flex;
     display: -o-flex;
     display: flex;
-    margin-bottom: 70px;
 }
 
 .prod-page .prod-top-part--left {
@@ -687,6 +686,10 @@ footer {
 .prod-page .prod-top-part--left__info .desc {
     color: rgba(255, 255, 255, 0.7);
 }
+.prod-page .prod-top-part--left__info .desc a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
 
 .prod-page .prod-top-part--left__info ul {
     padding-top: 30px;
@@ -719,6 +722,9 @@ footer {
 .prod-page .prod-top-part--left__list {
     width: 100%;
     padding-top: 30px;
+    font: 16px "Myriad Pro Regular";
+    color:#fff;
+    margin-bottom: 70px;
 }
 .container-load-more-product .load-more {
     margin-top: 6px;
@@ -1903,7 +1909,7 @@ footer {
     .prod-page .prod-bot-part--in div a {
         height: 48%;
     }
-    .prod-page .prod-top-part {
+    .prod-page .prod-top-part--left__list {
         margin-bottom: 30px;
     }
 }
