@@ -20,10 +20,16 @@ function ajaxGet(url, callback) {
     xmlhttp.send();
 }
 function moveTo(number, turn) {
-    $.fn.fullpage.moveTo(number);
-    if (turn) {
-        var bottomCoord = $('.section2 .fp-scrollable')[0].scrollHeight;
-        $('.section2 .fp-scrollable').slimScroll({scrollTo: bottomCoord});
+    if (!$(".inner_page").length) {
+        $.fn.fullpage.moveTo(number);
+        if (turn) {
+            var bottomCoord = $('.section2 .fp-scrollable')[0].scrollHeight;
+            $('.section2 .fp-scrollable').slimScroll({scrollTo: bottomCoord});
+        }
+    } else {
+        $('html, body').animate({
+            scrollTop: $("footer").offset().top
+        }, 1000)
     }
 }
 
