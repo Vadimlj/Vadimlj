@@ -1970,6 +1970,9 @@ footer {
     .prod-page .prod-top-part--left__info ul li:nth-child(2n) {
         width: 40%;
     }
+    .prod-page .prod-top-part--left__list ul li {
+        margin-bottom: 8px;x
+    }
 }
 .hide_imporatnt {
     display:none !important;
