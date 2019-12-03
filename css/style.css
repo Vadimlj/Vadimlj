@@ -204,12 +204,22 @@ h1 span{
     box-sizing: border-box;
     overflow: hidden;
 }
+.thanks_page .main-block {
+    margin-top: 0;
+}
 .description-text{
     position: relative;
     color: #ffffff;
     font-size: 22px;
     line-height: 1;
     margin-bottom: 26px;
+}
+.description-text a {
+    color:#fc5c76;
+    text-decoration: none;
+}
+.description-text a:hover {
+    color:#fff;
 }
 .girl-animation{
     position: relative;
