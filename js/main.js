@@ -45,7 +45,6 @@ function setGeoByClass(options) {
     var Opt = {
         'type':'city'
     }
-
     if (className == undefined) {
         console.log('Error. Please set class name.')
         return
@@ -54,7 +53,6 @@ function setGeoByClass(options) {
     for (var attrname in options) { Opt[attrname] = options[attrname]; }
 
     ajaxGet(domain + apiAction, function (e) {
-
         if (e['payload'][Opt.type] != "") {
             var element = document.getElementsByClassName(className);
             var i;
@@ -62,8 +60,7 @@ function setGeoByClass(options) {
                 element[i].innerHTML = e['payload'][Opt.type];
             }
         }
-
-    })
+    });
 
 }
 
@@ -420,6 +417,12 @@ $(function () {
             $(this).parents('.container-load-more').addClass('hide_imporatnt');
         }
         return false;
+    });
+
+    $('a[href^="tel"]').on('click', function(){
+        setTimeout(function(){
+            window.location.href = "thanks.html"
+        }, 5000);
     });
 });
 
