@@ -103,16 +103,14 @@ $(function () {
     }
 
     $(document).ready(function(){
-        $('.navbar-toggler').click(function(){
+        $('.navbar-toggler-js').click(function(){
             if($(this).hasClass('open')) {
                 $(this).removeClass('open');
-                $.fn.fullpage.setAutoScrolling(true);
                 $('body').css({
                     "overflow" : "auto"
                 });
             } else {
                 $(this).addClass('open');
-                $.fn.fullpage.setAutoScrolling(false);
                 $('body').css({
                     "overflow" : "hidden"
                 });
@@ -410,6 +408,17 @@ $(function () {
     $('.load-more-prods-lots-btn-js').on("click", function(){
         $('.load-more-prods-lots-js').fadeIn(200).addClass("show_inportant");
         $(this).parents('.container-load-more').addClass('hide_imporatnt');
+        return false;
+    });
+    $firstclick = 0;
+    $('.load-more-prods-lots-btn-js2').on("click", function() {
+        if ($firstclick == 0) {
+            $('.load-more-prods-lots-js3').fadeIn(200).addClass("show_inportant");
+            $firstclick = 1;
+        } else {
+            $('.load-more-prods-lots-js').fadeIn(200).addClass("show_inportant");
+            $(this).parents('.container-load-more').addClass('hide_imporatnt');
+        }
         return false;
     });
 });
