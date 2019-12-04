@@ -154,19 +154,10 @@ $(function () {
     $('select.sorting-js').styler();
 
     function sortingProducts(type){
-        var $wrapper = $('.girl-catalog-js');
-        if($wrapper.hasClass('owl-loaded')) {
-            $wrapper.trigger('destroy.owl.carousel');
-        }
+        var $wrapper = $('.girl-catalog-js3');
         $wrapper.find('.js-sorting-block').sort(function(a, b) {
-            console.log(a, b);
             return +$(a).data(type) - +$(b).data(type);
         }).appendTo($wrapper);
-
-        var tunner = check_width(576);
-        if (tunner) {
-            owlbuild();
-        }
     }
     $('select.sorting-js').on('change', function() {
         val = $(this).val();
