@@ -1256,6 +1256,34 @@ footer {
     -o-transform: rotate(-135deg);
     transform: rotate(-135deg);
 }
+.welcome_page {
+    height: 100vh;
+}
+.welcome-wr {
+    height: 100vh;
+}
+.welcome-text {
+    font: 48px 'Roboto', sans-serif;
+    color:#fff;
+    margin-bottom: 41px;
+}
+.welcome-button {
+    display: inline-block;
+    vertical-align: top;
+    background: #000;
+    color:#fff;
+    font: 26px 'Roboto', sans-serif;
+    background: url(../img/btn_my_new.png) no-repeat 50% 50%;
+    width: 255px;
+    height: 84px;
+    line-height: 84px;
+    background-size: 100%;
+}
+.welcome-button a {
+    color:#fff;
+    display: inline-block;
+    padding:0 4px;
+}
 @media (max-width: 1200px) {
     .prod-page .prod-inner {
         padding: 0 30px;
@@ -1603,6 +1631,27 @@ footer {
         cursor: pointer;
         margin-left: 0;
         margin-top: -52px;
+    }
+    .welcome-wr {
+        padding: 0 50px;
+    }
+    .welcome-text {
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: 36px;
+    }
+    .welcome-text span {
+        color:#fc5c76;
+        display: block;
+    }
+    .welcome-button {
+        font-size: 16px;
+        width: 170px;
+        height: 60px;
+        line-height: 60px;
+        background-size: 100%;
+
     }
 }
 @media (max-width: 600px) {
